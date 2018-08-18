@@ -1,0 +1,2 @@
+# Ignore .env file (like mariadb.env and database-info.env) to avoid accidental commit of personnal data
+*.env
