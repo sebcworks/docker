@@ -1,4 +1,4 @@
-# Sonerezh with Docker / sebcworks version
+# Sonerezh with Docker
 
 This is the Git repository of the official Docker image for [Sonerezh](https://www.sonerezh.bzh). See the Hub page for more informations.
 
@@ -9,9 +9,9 @@ This is the Git repository of the official Docker image for [Sonerezh](https://w
 Simply clone this repository and use `docker build`:
 
 ```sh
-$> git clone --master https://github.com/sebcworks/sonerezh-docker
+$> git clone --master https://github.com/Sonerezh/docker
 $> cd docker/nginx
-$> docker build --tag sebcworks/sonerezh .
+$> docker build --tag sonerezh .
 ```
 
 ## How to use this image
@@ -40,7 +40,7 @@ $> docker run --name sonerezh-app --link sonerezh-db:sonerezh-db \
                                   --env MYSQL_PASSWORD=changemetoo \
                                   --env MYSQL_DATABASE=sonerezh \
                                   --detach --publish 8080:80 \
-                                  sebcworks/sonerezh
+                                  sonerezh/sonerezh
 ```
 
 Your Sonerezh instance is available at http://127.0.0.1:8080 :) Make sure Sonerezh have read access to `/path/to/music` and read/write access to `/path/to/thumbnails`.
@@ -70,9 +70,9 @@ Next, you'll have to:
 Your folder should looks like this:
 
 ```ls
--rw-r--r-- 1 root root  80 Aug 18 15:27 database-info.env
+-rw-r----- 1 root root  80 Aug 18 15:27 database-info.env
 -rw-r--r-- 1 root root 729 Aug 18 15:29 docker-compose.yml
--rw-r--r-- 1 root root  57 Aug 18 15:27 mariadb.env
+-rw-r----- 1 root root  57 Aug 18 15:27 mariadb.env
 ```
 
 Then, all you can launch the containers:
@@ -86,4 +86,4 @@ $> docker-compose up -d
 ## Contributing
 
 You are invited to contribute new features, fixes, or update, large or small; we are always thrilled to receive pull requests, and do our best to process them as fast as we can.
-Before you start to code, we recommend discussing your plans through a [GitHub issue on the original repository](https://github.com/Sonerezh/sonerezh/issues), especially for more ambitious contributions.
+Before you start to code, we recommend discussing your plans through a [GitHub issue](https://github.com/Sonerezh/sonerezh/issues), especially for more ambitious contributions.

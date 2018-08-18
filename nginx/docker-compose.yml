@@ -9,7 +9,7 @@ services:
       - database-info.env
     restart: always
   app:
-    image: sebcworks/sonerezh:latest
+    image: sonerezh/sonerezh:latest
     depends_on:
       - sonerezh-db
     volumes:
